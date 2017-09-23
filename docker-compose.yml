@@ -1,0 +1,10 @@
+version: '3'
+services:
+  py:
+    image: "containerheartbeatapp:1.0"
+    depends_on:
+      - redis
+  redis:
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
